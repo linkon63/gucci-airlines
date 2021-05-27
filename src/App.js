@@ -38,7 +38,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Redux Hello
+            Redux Hello Linkon
           </a>
           ,<span> and </span>
           <a
