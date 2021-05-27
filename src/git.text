@@ -1,0 +1,10 @@
+First time:
+git clone https://github.com/linkon63/gucci-airlines.git
+git checkout -b YourName
+
+Next Time : 
+
+git add .
+git commit -m "DevBook"
+git fetch && git pull origin Development
+git push origin YourName
