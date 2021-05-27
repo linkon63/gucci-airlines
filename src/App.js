@@ -38,9 +38,9 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Redux Hello Linkon
+            Redux Hello Linkon, Rakib
           </a>
-          ,<span> and </span>
+          ,<span> and  Rabiul</span>
           <a
             className="App-link"
             href="https://react-redux.js.org/"
