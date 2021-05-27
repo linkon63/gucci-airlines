@@ -5,6 +5,6 @@ git checkout -b YourName
 Next Time : 
 
 git add .
-git commit -m "DevBook"
-git fetch && git pull origin Development
+git commit -m "AirBook"
+git fetch && git pull origin development
 git push origin YourName
