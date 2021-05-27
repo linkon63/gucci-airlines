@@ -10,7 +10,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Edit <code>src/App.js</code> and save to save.
         </p>
         <span>
           <span>Learn </span>
@@ -38,7 +38,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Redux Toolkit
+            Redux Hello Linkon
           </a>
           ,<span> and </span>
           <a
