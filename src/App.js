@@ -40,7 +40,7 @@ function App() {
           >
             Redux Hello Linkon, Rakib
           </a>
-          ,<span> and  Rabiul</span>
+          ,<span> and  Rabiul vai</span>
           <a
             className="App-link"
             href="https://react-redux.js.org/"
