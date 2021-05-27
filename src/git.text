@@ -4,6 +4,7 @@ git checkout -b YourName
 
 Next Time : 
 
+git pull origin development
 git add .
 git commit -m "AirBook"
 git fetch && git pull origin BranchName
