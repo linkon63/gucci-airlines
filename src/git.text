@@ -6,5 +6,5 @@ Next Time :
 
 git add .
 git commit -m "AirBook"
-git fetch && git pull origin development
+git fetch && git pull origin BranchName
 git push origin YourName
