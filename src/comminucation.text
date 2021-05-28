@@ -6,6 +6,7 @@ Installation:
 4. axios
 5. jwt-decode
 6. firebase
+7. font-awesome icon
 
 
 
@@ -13,5 +14,6 @@ Installation:
 
 Rakib Works: 
 1. I have connected application with the boostrap.
-2. I have installed React hook form 6.16.5, react router dom, axios, jwt-decode, firebase
+2. I have installed React hook form 6.16.5, react router dom, axios, jwt-decode, firebase,
+font-awesome icon
 

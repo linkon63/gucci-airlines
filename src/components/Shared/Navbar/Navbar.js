@@ -25,25 +25,25 @@ const Navbar = () => {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
+                            <li class="nav-item me-2">
                                 <a class="nav-link active text-white" aria-current="page" href="#2">Home</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item me-2">
                                 <a class="nav-link text-white" aria-current="page" href="#2">About</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item me-2">
                                 <a class="nav-link text-white" href="#3">Service</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item me-2">
                                 <a class="nav-link text-white" href="#3">Blog</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item me-2">
                                 <a class="nav-link text-white" href="#3">Gallery</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item me-2">
                                 <a class="nav-link text-white" href="#3">Order</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item me-2">
                                 <button className="btn btn-outline-info">Login</button>
                             </li>
                         </ul>
