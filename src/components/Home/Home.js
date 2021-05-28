@@ -1,9 +1,10 @@
 import React from 'react';
+import Navbar from '../Shared/Navbar/Navbar';
 
 const Home = () => {
     return (
         <div>
-            This Is Home
+            <Navbar />
         </div>
     );
 };
