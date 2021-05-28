@@ -8,7 +8,7 @@ const logoStyle = {
 const Navbar = () => {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <nav class="navbar navbar-expand-lg fixed-top" style={{backgroundColor: 'rgba(0,0,0,0.4)'}}>
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#1">
                         <img src={logo} alt="logo" style={logoStyle}/>
