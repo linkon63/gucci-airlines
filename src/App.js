@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Booking from './components/Main/Booking.js/Booking';
+import Login from './components/Main/Login/Login';
+import NotFound from './components/Main/NotFound/NotFound';
 
 function App() {
   return (
@@ -12,6 +14,12 @@ function App() {
         </Route>
         <Route path="/book/:id">
           <Booking />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </BrowserRouter>
