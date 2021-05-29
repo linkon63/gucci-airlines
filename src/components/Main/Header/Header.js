@@ -29,8 +29,12 @@ const Header = () => {
                 slidesPerView={1}
                 effect={'fade'}
                 autoplay={{ delay: 1500 }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => {
+                    // console.log(swiper)
+                }}
+                onSlideChange={() => {
+                    // console.log('slide change');
+                }}
             >
                 {
                     bannerImages && bannerImages.map(image => (
