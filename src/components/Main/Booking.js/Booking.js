@@ -1,21 +1,26 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
+import { addToTemporaryBookingList } from '../../../redux/actions/airLinesBookingAction';
 
 const Booking = () => {
     let history = useHistory();
+    const dispatch = useDispatch()
+    const airlineData = useSelector(state => state.airlinesReducers.singleAirlinesData)
+
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
-        // console.log(data)
+        const orderData = {...data, ...airlineData}
+        dispatch(addToTemporaryBookingList(orderData))
         history.push("/checkout");
     };
 
-    const data = useSelector(state => state.airlinesReducers.singleAirlinesData)
-    
+    // useSelector(state => console.log(state))
+
     return (
         <section className="container">
-            <h3 className="text-center py-5">Welcome to, {data.name} </h3>
+            <h3 className="text-center py-5">Welcome to, {airlineData.name} </h3>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className=" col-lg-9 mx-auto p-5 shadow-sm">
 
@@ -44,8 +49,8 @@ const Booking = () => {
                             {errors.endDate && <span>This field is required</span>}
                         </div>
                         <div className="col-md-3">
-                            <label htmlFor="passengers">Passengers:</label>
-                            <select className="form-control" name="passengers" ref={register({required: true})}>
+                            <label htmlFor="passengers">Total seat:</label>
+                            <select className="form-control" name="totalSeat" ref={register({required: true})}>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
