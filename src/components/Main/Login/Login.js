@@ -2,25 +2,29 @@ import React from 'react';
 import loginImg from '../../../images/login.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGoogle } from '@fortawesome/free-brands-svg-icons'
-import { useAuth } from '../../../lib/auth';
+import { signInWithGoogle } from '../../../lib/auth';
 import { useHistory, useLocation } from 'react-router';
+import { useDispatch } from 'react-redux';
+import { addUserInfo } from '../../../redux/actions/airLinesBookingAction';
 
 
 const Login = () => {
-    const logInData = useAuth();
-
     let history = useHistory();
     let location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
 
+    const dispatch = useDispatch();
+
     const handleGoogleSingIn = () => {
-        logInData[0].signInWithGoogle()
+        signInWithGoogle()
             .then(res => {
-                if (res.email) {
+                if (res) {
+                    dispatch(addUserInfo(res))
                     history.push(from)
                 }
             })
     }
+
     return (
         <div className="container">
             <h3 className="text-center py-4">Login Here</h3>
