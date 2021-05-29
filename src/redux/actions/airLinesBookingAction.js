@@ -17,3 +17,10 @@ export const removeFromBookingList = (payload) => {
         payload
     }
 }
+
+export const addToTemporaryBookingList = (payload) => {
+    return {
+        type: 'ADD_TO_TEMPORARY_BOOKING_LIST',
+        payload
+    }
+}

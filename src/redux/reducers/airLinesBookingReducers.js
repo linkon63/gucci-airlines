@@ -5,6 +5,7 @@ const initialValue = {
     airLinesBookingList: [],
     userList: [],
     singleAirlinesData: [],
+    temporaryBookingList: []
 }
 
 export const airlinesReducers = (state = initialValue, action) => {
@@ -25,6 +26,12 @@ export const airlinesReducers = (state = initialValue, action) => {
             return {
                 ...state,
                 airLinesBookingList: state.airLinesBookingList.filter(b => b.id !== action.payload)
+            }
+        }
+        case 'ADD_TO_TEMPORARY_BOOKING_LIST': {
+            return {
+                ...state,
+                temporaryBookingList: [action.payload]
             }
         }
         default: {
