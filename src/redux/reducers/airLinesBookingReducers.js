@@ -2,7 +2,7 @@ import airlinesData from '../../FakeData/airlines.json';
 
 const initialValue = {
     airlines: airlinesData,
-    bookingList: [],
+    airLinesBookingList: [],
     userList: []
 }
 
@@ -11,13 +11,13 @@ export const airlinesReducers = (state = initialValue, action) => {
         case 'ADD_TO_BOOKING_LIST': {
             return {
                 ...state,
-                bookingList: [...state.bookingList, action.payload]
+                airLinesBookingList: [...state.airLinesBookingList, action.payload]
             }
         }
         case 'REMOVE_FROM_BOOKING_LIST': {
             return {
                 ...state,
-                bookingList: state.bookingList.filter(b => b.id !== action.payload)
+                airLinesBookingList: state.airLinesBookingList.filter(b => b.id !== action.payload)
             }
         }
         default: {
