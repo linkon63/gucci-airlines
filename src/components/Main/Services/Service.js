@@ -6,11 +6,13 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 const Service = () => {
-    const ariLinesData = serviceData;
-    const dispatch = useDispatch();
-    const data = useSelector(state => {
-        console.log(state)
+    // const ariLinesData = serviceData;
+
+    const ariLinesData = useSelector((state) => {
+        return state.airlinesReducers.airlines
     })
+
+    // console.log(data)
     return (
         <section style={{ backgroundColor: '#F6F4EF' }}>
             <h4 className="text-center pt-5">SERVICES THAT WE PROVIDE</h4>
