@@ -1,53 +1,16 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-
-
-//images 
-import emirates from '../../../images/emirits.png';
-import qatarAirlines from '../../../images/quatar-airlines.png'
-import SaudiAirlines from '../../../images/soudi-airlines.png';
-import KoreanAir from '../../../images/korean-air.png';
-import VirginAtlanticAirways from '../../../images/virgin-atlentic-airlines.png';
-import ThaiAirwaysInternational from '../../../images/thai-airlines.png';
+import serviceData from '../../../FakeData/airlines.json';
 import { Link } from 'react-router-dom';
-
-//fake data
-const ariLinesData = [
-    {
-        name: 'Emirates Airway',
-        img: emirates,
-        id: '1'
-    },
-    {
-        name: 'Qatar Airways',
-        img: qatarAirlines,
-        id: '2'
-    },
-    {
-        name: 'Saudi Airlines',
-        img: SaudiAirlines,
-        id: '3'
-    },
-    {
-        name: 'Korean Air',
-        img: KoreanAir,
-        id: '4'
-    },
-    {
-        name: 'Virgin Atlantic Airways',
-        img: VirginAtlanticAirways,
-        id: '5'
-    },
-    {
-        name: 'Thai Airways International',
-        img: ThaiAirwaysInternational,
-        id: '5'
-    },
-]
-
+import { useDispatch, useSelector } from 'react-redux';
 
 const Service = () => {
+    const ariLinesData = serviceData;
+    const dispatch = useDispatch();
+    const data = useSelector(state => {
+        console.log(state)
+    })
     return (
         <section style={{ backgroundColor: '#F6F4EF' }}>
             <h4 className="text-center pt-5">SERVICES THAT WE PROVIDE</h4>
