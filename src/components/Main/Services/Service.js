@@ -4,15 +4,16 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import serviceData from '../../../FakeData/airlines.json';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { showSingleAirlineData } from '../../../redux/actions/airLinesBookingAction';
 
 const Service = () => {
-    // const ariLinesData = serviceData;
 
     const ariLinesData = useSelector((state) => {
         return state.airlinesReducers.airlines
     })
 
-    // console.log(data)
+    const dispatch = useDispatch();
+
     return (
         <section style={{ backgroundColor: '#F6F4EF' }}>
             <h4 className="text-center pt-5">SERVICES THAT WE PROVIDE</h4>
@@ -30,7 +31,7 @@ const Service = () => {
                                     </div>
                                     <div className="card-action">
                                         <Link to={`/book/${airline.id}`}>
-                                            <button className="btn btn-dark">Book Now <span><FontAwesomeIcon icon={faArrowRight} /></span></button>
+                                            <button onClick={() => dispatch(showSingleAirlineData(airline.id))} className="btn btn-dark">Book Now <span><FontAwesomeIcon icon={faArrowRight} /></span></button>
                                         </Link>
                                     </div>
                                 </div>
