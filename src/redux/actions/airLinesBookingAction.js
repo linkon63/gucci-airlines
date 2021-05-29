@@ -24,3 +24,10 @@ export const addToTemporaryBookingList = (payload) => {
         payload
     }
 }
+
+export const addUserInfo = (payload) => {
+    return {
+        type: 'ADD_USER_INFO',
+        payload
+    }
+}
