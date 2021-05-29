@@ -44,8 +44,12 @@ const Review = () => {
                     slidesPerView={1}
                     navigation
                     autoplay={{ delay: 2000 }}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => {
+                        // console.log(swiper)
+                    }}
+                    onSlideChange={() => {
+                        // console.log('slide change')
+                    }}
                 >
                     {
                         reviewData && reviewData.map(review => (
