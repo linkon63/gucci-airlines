@@ -37,7 +37,7 @@ export const PaymentCart = ({ orderDetails }) => {
     }
   };
 
-  // useSelector(state => console.log(state))
+  useSelector(state => console.log(state))
 
   return (
     <form onSubmit={handleSubmit}>

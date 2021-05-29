@@ -3,7 +3,7 @@ import airlinesData from '../../FakeData/airlines.json';
 const initialValue = {
     airlines: airlinesData,
     airLinesBookingList: [],
-    userList: [],
+    userInfo: [],
     singleAirlinesData: [],
     temporaryBookingList: []
 }
@@ -32,6 +32,12 @@ export const airlinesReducers = (state = initialValue, action) => {
             return {
                 ...state,
                 temporaryBookingList: [action.payload]
+            }
+        }
+        case 'ADD_USER_INFO': {
+            return {
+                ...state,
+                userInfo: [action.payload]
             }
         }
         default: {
