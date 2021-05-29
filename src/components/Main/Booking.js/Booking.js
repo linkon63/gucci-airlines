@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { addToTemporaryBookingList } from '../../../redux/actions/airLinesBookingAction';
+import Navbar from '../../Shared/Navbar/Navbar';
 
 const Booking = () => {
     let history = useHistory();
@@ -19,10 +20,12 @@ const Booking = () => {
     // useSelector(state => console.log(state))
 
     return (
-        <section className="container">
-            <h3 className="text-center py-5">Welcome to, {airlineData.name} </h3>
-            <form onSubmit={handleSubmit(onSubmit)}>
-                <div className=" col-lg-9 mx-auto p-5 shadow-sm">
+        <div>
+            <Navbar></Navbar>
+            <section className="container mt-5">
+                <h3 className="text-center py-5">Welcome to {airlineData.name} </h3>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <div className=" col-lg-9 mx-auto p-5 shadow-sm">
 
                         <div className="row">
                             <div className="col-md-6 mb-3">
@@ -62,8 +65,10 @@ const Booking = () => {
 
                         <button type="submit" className="btn btn-dark mt-3 d-block ms-auto">Submit</button>
                     </div>
+                    </div>
                 </form>
             </section>
+        </div>
     );
 };
 
