@@ -8,6 +8,7 @@ Installation:
 6. firebase
 7. font-awesome icon
 8. swiper.js
+9.stripe.js
 
 
 
@@ -16,5 +17,5 @@ Installation:
 Rakib Works: 
 1. I have connected application with the boostrap.
 2. I have installed React hook form 6.16.5, react router dom, axios, jwt-decode, firebase,
-font-awesome icon, swiper.js
+font-awesome icon, swiper.js, stripr.js,
 
