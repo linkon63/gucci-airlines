@@ -1,18 +1,21 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 
 const Booking = () => {
     let history = useHistory();
     const { register, handleSubmit, errors } = useForm();
     const onSubmit = data => {
-        console.log(data)
+        // console.log(data)
         history.push("/checkout");
     };
 
+    const data = useSelector(state => state.airlinesReducers.singleAirlinesData)
+    
     return (
         <section className="container">
-            <h3 className="text-center py-5">Airline Name</h3>
+            <h3 className="text-center py-5">Welcome to, {data.name} </h3>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className=" col-lg-9 mx-auto p-5 shadow-sm">
 
