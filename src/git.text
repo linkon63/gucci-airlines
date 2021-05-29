@@ -6,6 +6,6 @@ Next Time :
 
 git pull origin development
 git add .
-git commit -m "AirBook"
+git commit -m "AirBook Linkon"
 git fetch && git pull origin BranchName
 git push origin YourName
