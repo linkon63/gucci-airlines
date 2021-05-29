@@ -24,18 +24,18 @@ const Booking = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className=" col-lg-9 mx-auto p-5 shadow-sm">
 
-                    <div className="row">
-                        <div className="col-md-6 mb-3">
-                            <label htmlFor="start">From:</label>
-                            <input type="text" ref={register({ required: true })} name="start" className="form-control" placeholder="City Or Airport Name" />
-                            {errors.start && <span>This field is required</span>}
+                        <div className="row">
+                            <div className="col-md-6 mb-3">
+                                <label htmlFor="start">From:</label>
+                                <input type="text" ref={register({ required: true })} name="start" className="form-control" placeholder="City Or Airport Name" />
+                                {errors.start && <span>This field is required</span>}
+                            </div>
+                            <div className="col-md-6 mb-3">
+                                <label htmlFor="end">To:</label>
+                                <input ref={register({ required: true })} type="text" name="end" className="form-control" placeholder="City or Airport Name" />
+                                {errors.end && <span>This field is required</span>}
+                            </div>
                         </div>
-                        <div className="col-md-6 mb-3">
-                            <label htmlFor="end">To:</label>
-                            <input ref={register({ required: true })} type="text" name="end" className="form-control" placeholder="City or Airport Name" />
-                            {errors.end && <span>This field is required</span>}
-                        </div>
-                    </div>
 
                     <div className="row">
                         <div className="col-md-3">
@@ -59,20 +59,11 @@ const Booking = () => {
                             </select>
                             {errors.passengers && <span>This field is required</span>}
                         </div>
-                        <div className="col-md-3">
-                            <label htmlFor="end">Type:</label>
-                            <select className="form-control" name="type" ref={register({required: true})}>
-                                <option value="vip">VIP</option>
-                                <option value="economy">ECONOMY</option>
-                            </select>
-                            {errors.type && <span>This field is required</span>}
-                        </div>
-                    </div>
 
-                    <button type="submit" className="btn btn-dark mt-3 d-block ms-auto">Submit</button>
-                </div>
-            </form>
-        </section>
+                        <button type="submit" className="btn btn-dark mt-3 d-block ms-auto">Submit</button>
+                    </div>
+                </form>
+            </section>
     );
 };
 
