@@ -19,6 +19,20 @@ code {
     monospace;
 }
 
+.nav-button {
+  padding: 10px 35px;
+  font-size: 15px;
+  background-color: #D3C19F;
+  text-transform: uppercase;
+  border-radius: 64px;
+  font-weight: 500;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+  text-decoration: none;
+}
+
 .button {
   padding: 14px 40px;
   font-size: 15px;
@@ -33,7 +47,8 @@ code {
   text-decoration: none;
 }
 
-.button:hover {
+.button:hover,
+.nav-button:hover {
   background-color: #171717;
   color: #fff;
 }
