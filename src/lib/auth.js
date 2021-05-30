@@ -17,13 +17,14 @@ export const PrivateRoute = ({children, ...rest}) => {
         const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
             if (user) {
                 const formattedUser = formatUser(user);
+                console.log(formattedUser)
                 setUser(formattedUser)
                 dispatch(addUserInfo(formattedUser))
             }
         });
 
         return () => unsubscribe();
-    }, [dispatch]);
+    }, []);
 
     const userInfo = useSelector(state => state.airlinesReducers.userInfo[0]);
 
@@ -46,7 +47,7 @@ export const PrivateRoute = ({children, ...rest}) => {
     );
 };
 
-const formatUser = (user) => ({
+export const formatUser = (user) => ({
     email: user.email,
     name: user.displayName,
     provider: user.providerData[0].providerId,
@@ -71,7 +72,7 @@ export const signOut = () => {
     return firebase
         .auth()
         .signOut()
-        .then(() => {
-            console.log('logout complete')
+        .then((res) => {
+            return res
         });
 };
