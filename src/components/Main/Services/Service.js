@@ -15,22 +15,22 @@ const Service = () => {
 
     return (
         <section style={{ backgroundColor: '#F6F4EF' }}>
-            <h4 className="text-center pt-5">SERVICES THAT WE PROVIDE</h4>
+            <h4 className="text-center pt-5 title">Services that we provide</h4>
             <div className="container py-5">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     {
                         ariLinesData && ariLinesData.map(airline => (
 
                             <div class="col">
-                                <div class="card h-100 border-0 p-3 rounded">
+                                <div class="card h-100 p-3 border_radius border-0 text-center">
                                     <img src={airline.img} class="card-img-top" alt={airline.name} />
                                     <div class="card-body">
-                                        <h5 class="card-title">{airline.name}</h5>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur.</p>
+                                        <h5 class="card_title">{airline.name}</h5>
+                                        <p className="card_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur.</p>
                                     </div>
                                     <div className="card-action">
                                         <Link to={`/book/${airline.id}`}>
-                                            <button onClick={() => dispatch(showSingleAirlineData(airline.id))} className="btn btn-dark">Book Now <span><FontAwesomeIcon icon={faArrowRight} /></span></button>
+                                            <button onClick={() => dispatch(showSingleAirlineData(airline.id))} className="button">Book Now <span><FontAwesomeIcon icon={faArrowRight} /></span></button>
                                         </Link>
                                     </div>
                                 </div>

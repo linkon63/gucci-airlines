@@ -19,7 +19,7 @@ const ThankYouPage = () => {
                     <small className="text-primary"> {orderData?.startDate}</small>.
                     And you will return
                     <small className="text-primary">{orderData?.endDate}</small></h6>
-                <button onClick={() => history.push('/')} className="btn btn-dark mt-3">Back Home</button>
+                <button onClick={() => history.push('/')} className="mt-3 button">Back Home</button>
             </div>
         </section>
     );
