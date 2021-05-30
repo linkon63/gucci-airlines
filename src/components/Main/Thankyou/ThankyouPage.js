@@ -8,7 +8,7 @@ const ThankYouPage = () => {
     console.log(orderData)
     return (
         <section className="container">
-            <h3 className="text-center my-4">Thank You For Your Order</h3>
+            <h3 className="text-center my-4 title">Thank You For Your Order</h3>
             <div className="col-12 col-sm-12 col-md-8 col-lg-6 mx-auto shadow-sm p-5 mt-5">
                 <h6><small>Your Payment Id:</small> <small className="text-primary">{orderData?.paymentId}</small></h6>
                 <h6><small>Your Airlines Name:</small> <small className="text-primary">{orderData?.name}</small></h6>

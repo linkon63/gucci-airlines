@@ -69,9 +69,9 @@ export const PaymentCart = ({ orderDetails }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h6 className="text-center py-4">Enter Card Number Here</h6>
+      <h6 className="text-center py-4 title">Enter Card Number Here</h6>
         <CardElement options={CARD_OPTIONS} />
-        <button className="btn btn-dark mt-4 w-25 d-block ms-auto " type="submit" disabled={!stripe}>
+        <button className="button mt-4 d-block ms-auto " type="submit" disabled={!stripe}>
           Pay
         </button>
         <p className="pt-4 text-primary text-center">{success}</p>

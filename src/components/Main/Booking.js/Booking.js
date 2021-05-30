@@ -24,7 +24,7 @@ const Booking = () => {
         <div>
             <Navbar></Navbar>
             <section className="container mt-5">
-                <h3 className="text-center py-5">Welcome to {airlineData.name} </h3>
+                <h3 className="text-center title py-5">Welcome to {airlineData.name} </h3>
                 <div className="row">
                     <div className="col-md-5">
                         <img src={booking} alt="alt" className="img-fluid" />
@@ -72,7 +72,7 @@ const Booking = () => {
                                     </div>
 
                                     <div className="col-md-6 mt-4">
-                                    <button type="submit" className="btn btn-dark mt-3 d-block w-100 ms-auto">Submit</button>
+                                    <button type="submit" className="button mt-2 d-block w-100 ms-auto">Submit</button>
                                     </div>
                                 </div>
                             </div>
