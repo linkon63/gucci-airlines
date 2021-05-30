@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
 import About from './components/Main/About/About.js';
@@ -8,25 +7,14 @@ import Booking from './components/Main/Booking.js/Booking';
 import CheckoutPage from './components/Main/CheckoutPage/CheckoutPage';
 import Login from './components/Main/Login/Login';
 import NotFound from './components/Main/NotFound/NotFound';
+import Orders from './components/Main/Order/Orders';
+import Service from './components/Main/Services/Service';
 import ThankYouPage from './components/Main/Thankyou/ThankyouPage';
-import { formatUser, PrivateRoute } from './lib/auth';
-import { addUserInfo } from './redux/actions/airLinesBookingAction';
-import firebase from "../src/lib/firebase";
+import Footer from './components/Shared/Footer/Footer';
+import Navbar from './components/Shared/Navbar/Navbar';
+import { PrivateRoute } from './lib/auth';
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-            const formattedUser = formatUser(user);
-            console.log(formattedUser)
-            dispatch(addUserInfo(formattedUser))
-        }
-    });
-
-    return () => unsubscribe();
-}, []);
 
   return (
     <BrowserRouter>
@@ -51,6 +39,14 @@ function App() {
         </PrivateRoute>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route path="/service">
+          <Navbar />
+          <Service />
+          <Footer />
+        </Route>
+        <Route path="/order">
+          <Orders />
         </Route>
         <Route path="/thankyou">
           <ThankYouPage />

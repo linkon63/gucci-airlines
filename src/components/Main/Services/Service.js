@@ -14,7 +14,7 @@ const Service = () => {
     const dispatch = useDispatch();
 
     return (
-        <section style={{ backgroundColor: '#F6F4EF' }}>
+        <section style={{ backgroundColor: '#F6F4EF' }} className="pt-4">
             <h4 className="text-center pt-5 title">Services that we provide</h4>
             <div className="container py-5">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
