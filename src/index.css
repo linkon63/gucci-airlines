@@ -58,3 +58,45 @@ code {
   color: #d3c19f;
   font-weight: 700;
 }
+
+.subtitle {
+  font-size: 21px;
+}
+
+.review-text {
+  font-size: 22px;
+  font-style: italic;
+}
+
+.reviewer_name {
+  font-size: 19px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: red;
+  font-size: 23px!important;
+  background-color: #171717;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  background-color: #D3C19F;
+  color: #171717;
+}
+
+.form_control {
+  padding: 13px 40px;
+  border-radius: 64px;
+  border: 0;
+  position: relative;
+}
+
+.position {
+  position: absolute;
+  right: 0;
+}

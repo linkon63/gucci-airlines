@@ -13,14 +13,12 @@ const Footer = () => {
             <div className="py-5 border-bottom border-white">
                 <div className="row px-0 px-sm-0 px-lg-4 d-flex justify-center align-items-center">
                     <div className="col-md-6 text-white">
-                        <p>Want to know about our offers first?</p>
-                        <h3>Subscribe our newsletter</h3>
+                        <p className="subtitle">Want to know about our offers first?</p>
+                        <h3 className="title">Subscribe our newsletter</h3>
                     </div>
                     <div className="col-md-6">
-                        <div className="d-flex">
-                            <input type="text" className="form-control" placeholder="Your Email..." />
-                            <button className="btn btn-info">Subscribe</button>
-                        </div>
+                        <input type="text" className="form_control w-100" placeholder="Your Email..." />
+                        <button className="button position-absolute position">Subscribe</button>
                     </div>
                 </div>
             </div>

@@ -36,8 +36,8 @@ SwiperCore.use([Navigation, Scrollbar, A11y, Autoplay]);
 const Review = () => {
     return (
         <section className="text-center my-5 py-5">
-            <h4>TESTIMONIALS</h4>
-            <h3 className="pt-2 pb-4">WHAT OUR CUSTOMERS SAY</h3>
+            <h4 className="title">TESTIMONIALS</h4>
+            <h6 className="pt-2 pb-4 subtitle">WHAT OUR CUSTOMERS SAY</h6>
             <div className="container">
                 <Swiper
                     spaceBetween={50}
@@ -52,12 +52,12 @@ const Review = () => {
                     }}
                 >
                     {
-                        reviewData && reviewData.map(review => (
-                            <SwiperSlide>
-                                <div className="p-5 col-12 col-md-8 col-sm-12 col-lg-8 mx-auto text-dark text-center rounded" style={{backgroundColor: '#F6F4EF'}}>
-                                    <blockquote>{review.review}</blockquote>
+                        reviewData && reviewData.map((review, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="p-5 col-12 col-md-8 col-sm-12 col-lg-8 mx-auto text-dark text-center border_radius" style={{backgroundColor: '#F6F4EF'}}>
+                                    <blockquote className="review-text mb-3">{review.review}</blockquote>
                                     <img src={review.img} alt={review.name} />
-                                    <h3>{review.name}</h3>
+                                    <h3 className="reviewer_name mt-3">{review.name}</h3>
                                 </div>
                             </SwiperSlide>
                         ))

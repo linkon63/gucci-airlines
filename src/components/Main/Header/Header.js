@@ -6,8 +6,6 @@ import SwiperCore, { EffectFade, Scrollbar, A11y, Autoplay } from 'swiper';
 
 //images
 import banner1 from '../../../images/splas.jpg';
-import banner2 from '../../../images/banner-2.jpg';
-import banner3 from '../../../images/slider-3.jpg';
 import banner4 from '../../../images/slider-4.jpg';
 
 //fakeData 
@@ -40,8 +38,8 @@ const Header = () => {
                 }}
             >
                 {
-                    bannerImages && bannerImages.map(image => (
-                        <SwiperSlide>
+                    bannerImages && bannerImages.map((image, index) => (
+                        <SwiperSlide key={index}>
                             <div className="h-100">
                                 <img src={image} alt="banner" style={bannerImgStyle} />
                             </div>

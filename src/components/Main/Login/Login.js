@@ -27,13 +27,13 @@ const Login = () => {
 
     return (
         <div className="container">
-            <h3 className="text-center py-4">Login Here</h3>
+            <h3 className="text-center py-4 title">Login Here</h3>
             <div className="row">
                 <div className="col-md-6">
                     <img src={loginImg} alt="login" className="img-fluid" />
                 </div>
                 <div className="col-md-6 d-flex justify-content-center align-items-center">
-                    <button onClick={handleGoogleSingIn} className="btn btn-dark"><FontAwesomeIcon icon={faGoogle} /> Sign in With Google</button>
+                    <button onClick={handleGoogleSingIn} className="button"><FontAwesomeIcon icon={faGoogle} /> Sign in With Google</button>
                 </div>
             </div>
         </div>
