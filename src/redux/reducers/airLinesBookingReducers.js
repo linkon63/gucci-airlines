@@ -19,7 +19,7 @@ export const airlinesReducers = (state = initialValue, action) => {
         case 'ADD_TO_BOOKING_LIST': {
             return {
                 ...state,
-                airLinesBookingList: [...state.airLinesBookingList, action.payload]
+                airLinesBookingList: [action.payload]
             }
         }
         case 'REMOVE_FROM_BOOKING_LIST': {

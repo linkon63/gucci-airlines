@@ -63,7 +63,7 @@ export const PaymentCart = ({ orderDetails }) => {
       const paymentWith = paymentMethod.card.brand;
       const bookingData = { ...temporaryBookingData, paymentId, paymentWith }
       dispatch(addToBookingList(bookingData))
-      history.push('/order-summary')
+      history.push('/thankyou')
     }
   };
 
