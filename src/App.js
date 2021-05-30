@@ -5,7 +5,7 @@ import Booking from './components/Main/Booking.js/Booking';
 import CheckoutPage from './components/Main/CheckoutPage/CheckoutPage';
 import Login from './components/Main/Login/Login';
 import NotFound from './components/Main/NotFound/NotFound';
-import Summary from './components/Main/Summary/Summary';
+import ThankYouPage from './components/Main/Thankyou/ThankyouPage';
 import { PrivateRoute } from './lib/auth';
 
 function App() {
@@ -28,8 +28,8 @@ function App() {
         <Route path="/login">
           <Login />
         </Route>
-        <Route path="/order-summary">
-          <Summary />
+        <Route path="/thankyou">
+          <ThankYouPage />
         </Route>
         <Route path="*">
           <NotFound />
