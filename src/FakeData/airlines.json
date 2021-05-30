@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Emirates Airway",
+        "img": "https://i.ibb.co/R3Dgncm/emirits.png",
+        "id": 1
+    },
+    {
+        "name": "Qatar Airways",
+        "img": "https://i.ibb.co/QMrCm7t/quatar-airlines.png",
+        "id": 2
+    },
+    {
+        "name": "Saudi Airlines",
+        "img": "https://i.ibb.co/PhkC5tj/soudi-airlines.png",
+        "id" : 3
+    },
+    {
+        "name": "Korean Air",
+        "img": "https://i.ibb.co/7gdyCZq/korean-air.png",
+        "id": 4
+    },
+    {
+        "name": "Atlantic Airways",
+        "img": "https://i.ibb.co/xs4ft3Y/virgin-atlentic-airlines.png",
+        "id": 5
+    },
+    {
+        "name": "Thai Airways International",
+        "img": "https://i.ibb.co/wsws9kh/thai-airlines.png",
+        "id": 6
+    }
+]
